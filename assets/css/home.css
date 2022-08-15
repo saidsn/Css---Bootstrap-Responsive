@@ -4,15 +4,17 @@
     box-sizing: border-box;
 }
 
+.row{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 @font-face {
     font-family: font;
     src: url(../fonts/NotoSansTC-Regular.otf);
 }
 
-body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
+
 
 #nav-area .my-container {
     width: 90%;
@@ -116,6 +118,8 @@ body {
 #promotion .image img {
     width: 100%;
     height: 650px;
+   
+   
 }
 
 #promotion .image {
@@ -125,6 +129,8 @@ body {
     align-items: center;
     position: relative;
     justify-content: center;
+ 
+  
 }
 
 #promotion .image .info {
@@ -287,26 +293,77 @@ i {
     padding-top: 100px;
 }
 
-#products .product-one img {
+#products .general-hover img {
     width: 320px;
     height: 396px;
     position: absolute;
     top: 150px;
+    
+}
+#products .general-hover img:nth-child(2){
+    display: none;
+}
+#products .general-hover:hover img:nth-child(2){
+    display: block;
+   
+   
+}
+#products .general-hover:hover img:nth-child(1){
+    display: none;
+    
+}
+#products .general-hover{
+  border-radius: 10px;
 }
 
-#products .about-one {
+
+.price button:nth-child(2){
+    display: none;
+}
+.price:hover button:nth-child(2){
+    display: block;
+}
+.price:hover .price-star:nth-child(1){
+    display: none;
+    transition: all 0.5s;
+}
+#products .price{
+    display: flex;
+    position: relative;
+    justify-content: center;
+   
+}
+
+
+#products .general-hover button {
+    width: 130px;
+    height: 40px;
+    border-radius: 30px;
+    padding-top: 7px;
+    position: absolute;
+    background-color:#33CAD5;
+    border: none;
+    cursor: pointer;
+   
+}
+#products button a{
+    text-decoration: none;
+    color: white;
+}
+
+#products button:hover{
+    background-color: black;
+}
+
+#products .general-hover .about {
     width: 320px;
-    height: 200px;
+    height: 160px;
     background-color: white;
     position: absolute;
     top: 546px;
+    padding-top: 30px;
+    left: 15px;
     text-align: center;
-}
-
-#products .about-one .text-one {
-    position: absolute;
-    top: 70px;
-    left: 56px;
 }
 
 #products .background span {
@@ -315,87 +372,10 @@ i {
 
 #products .background p {
     color: black;
+    cursor: pointer;
 }
 
-#products .product-second img {
-    width: 320px;
-    height: 396px;
-    position: absolute;
-    top: 150px;
-    left: 15px;
-}
 
-#products .about-second {
-    width: 320px;
-    height: 200px;
-    background-color: white;
-    position: absolute;
-    top: 546px;
-    left: 15px;
-    text-align: center;
-}
-
-#products .about-second .text-second {
-    position: absolute;
-    top: 70px;
-    left: 40px;
-}
-
-#products .product-third img {
-    width: 320px;
-    height: 396px;
-    position: absolute;
-    top: 150px;
-    left: 15px;
-}
-
-#products .about-third {
-    width: 320px;
-    height: 200px;
-    background-color: white;
-    position: absolute;
-    top: 545px;
-    left: 15px;
-    text-align: center;
-}
-
-#products .about-third .text-third {
-    position: absolute;
-    top: 70px;
-    left: 80px;
-}
-
-#products .product-fourth img {
-    width: 320px;
-    height: 396px;
-    position: absolute;
-    top: 150px;
-    left: 15px;
-}
-
-#products .about-fourth {
-    width: 320px;
-    height: 200px;
-    background-color: white;
-    position: absolute;
-    top: 546px;
-    left: 15px;
-    text-align: center;
-
-}
-
-#products .about-fourth .text-fourth {
-    position: absolute;
-    top: 70px;
-    left: 56px;
-}
-
-#products .stars {
-    position: absolute;
-    position: relative;
-    bottom: 15px;
-    left: 6px;
-}
 
 #products .background i {
     color: gold;
@@ -406,7 +386,7 @@ i {
     color: #33CAD5;
 }
 
-#second-productes .my-container {
+#second-products .my-container {
     width: 90%;
     height: 85px;
     background-color: #fafafa;
@@ -414,37 +394,72 @@ i {
     position: relative;
 }
 
-#second-productes .background2 {
+#second-products .background2 {
     width: 100%;
     height: 690px;
     background-color: #fafafa;
     padding-top: 40px;
 }
+#second-products img{
+    border-radius: 10px;
+    transition: .5s;
 
-#second-productes .product-one img {
-    padding-top: 31px;
 }
 
-#second-productes .about-one {
+
+#second-products .info-one{
+    overflow: hidden;
+    border-radius: 10px;
+}
+#second-products .info-two{
+    overflow: hidden;
+    border-radius: 10px;
+}
+#second-products .info-three{
+    margin-top: 45px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#second-products .info-four{
+    overflow: hidden;
+    border-radius: 10px;
+}
+#second-products .info-five{
+    margin-top: 45px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#second-products img:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+#second-products .product-one img {
+   
+    height: 100%;
+    width: 100%;
+}
+
+#second-products .about-one {
     position: absolute;
     bottom: 110px;
     left: 260px;
 }
 
-#second-productes .about-one h1 {
+#second-products .about-one h1 {
     font-size: 60px;
 }
 
-#second-productes .about1 h5 {
+#second-products .about1 h5 {
     font-size: 25px;
 }
 
-#second-productes .about-one h1,
+#second-products .about-one h1,
 h5 {
     color: white;
 }
 
-#second-productes .info-one button {
+#second-products .info-one button {
     width: 140px;
     height: 50px;
     border-radius: 30px;
@@ -455,32 +470,32 @@ h5 {
     border: none;
     cursor: pointer;
 }
-#second-productes button a{
+#second-products button a{
     text-decoration: none;
 }
 
-#second-productes .background2 button:hover{
+#second-products .background2 button:hover{
     background-color: black;
     transition: 0.3s;
     
 }
 
-#second-productes button:hover span {
+#second-products button:hover span {
     color: white;
     transition: 0.3s;
 }
 
-#second-productes button span {
+#second-products button span {
     color: black;
 }
 
-#second-productes .about-two {
+#second-products .about-two {
     position: absolute;
     bottom: 390px;
     left: 70px;
 }
 
-#second-productes .info-two button {
+#second-products .info-two button {
     width: 140px;
     height: 50px;
     border-radius: 30px;
@@ -493,13 +508,13 @@ h5 {
 
 }
 
-#second-productes .about-three {
+#second-products .about-three {
     position: absolute;
     bottom: 120px;
     left: 240px;
 }
 
-#second-productes .info-three button {
+#second-products .info-three button {
     width: 140px;
     height: 50px;
     border-radius: 30px;
@@ -512,22 +527,22 @@ h5 {
     transition: 0.3s;
 }
 
-#second-productes .about-four {
+#second-products .about-four {
     position: absolute;
     bottom: 375px;
     right: 250px;
 }
 
-#second-productes .about-four h1 {
+#second-products .about-four h1 {
     font-size: 35px;
     color: white;
 }
 
-#second-productes .about-four h5 {
+#second-products .about-four h5 {
     font-size: 25px;
 }
 
-#second-productes .info-four button {
+#second-products .info-four button {
     width: 140px;
     height: 50px;
     border-radius: 30px;
@@ -539,22 +554,22 @@ h5 {
     cursor: pointer;
 
 }
-#second-productes .about-five {
+#second-products .about-five {
     position: absolute;
     bottom: 85px;
     right: 10px;
 }
 
-#second-productes .about-five h1 {
+#second-products .about-five h1 {
     font-size: 35px;
     color: white;
 }
 
-#second-productes .about-five h5 {
+#second-products .about-five h5 {
     font-size: 25px;
 }
 
-#second-productes .info-five button {
+#second-products .info-five button {
     width: 140px;
     height: 50px;
     border-radius: 30px;
@@ -631,7 +646,7 @@ h5 {
 
 #latest {
     background-color: #FAFAFA;
-    height: 550px;
+    height: 650px;
 }
 
 #latest .background {
@@ -647,11 +662,31 @@ h5 {
 #latest .header h3 {
     margin-top: 100px;
 }
+
+
+
 #latest img {
-    margin-top: 50px;
+   
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+#latest .image-hover{
     width: 436px;
     height: 254px;
+    margin-top: 50px;
+    overflow: hidden;
+    border-radius: 10px;
 }
+#latest img:hover{
+   transform: scale(1.1);
+   transition: .5s;
+  
+}
+
+
+
+
 #latest a{
     text-decoration: none;
 }
@@ -668,7 +703,7 @@ p {
     font-size: 15px;
 }
 
-#latest .col-4 h5 {
+#latest h5 {
     text-align: center;
     margin-top: 20px;
     color: black;
@@ -685,6 +720,7 @@ p {
 #purchase {
     background-color: #55d5de;
     height: 120px;
+   
 }
 
 #purchase .my-container {
@@ -976,3 +1012,5 @@ span {
 #fotter-logo .company-logo a:hover {
     color: #33CAD5;
 }
+
+    
